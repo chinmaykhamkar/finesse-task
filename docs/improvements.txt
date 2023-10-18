@@ -8,3 +8,7 @@
 - try try in 3d mode
 - add name of product and price below the model image. tbh I don't see the need for this.
 - shift the free shipping, free exchange section at the end
+
+
+ux issues 
+- inconsistent navbars for desktop and mobile view
