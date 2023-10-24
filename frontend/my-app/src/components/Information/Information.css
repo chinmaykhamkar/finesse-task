@@ -47,3 +47,9 @@
     cursor: pointer;
     font-size: smaller;
 }
+
+@media (max-width: 576px) {
+    .main-info {
+        display: none;
+    }
+}

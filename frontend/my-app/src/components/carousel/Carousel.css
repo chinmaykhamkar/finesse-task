@@ -85,6 +85,11 @@
     background: rgb(211, 211, 211, 0.8);
 } 
 
+.carousel .control-next.control-arrow:before {
+    border-left: 10px solid #fff !important;
+    margin-left: 8px !important;
+}
+
 
 @media (max-width: 576px) {
     

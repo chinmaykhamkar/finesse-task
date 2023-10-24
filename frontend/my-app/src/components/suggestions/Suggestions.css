@@ -102,3 +102,22 @@
     margin-left: 20px;
     margin-right: 20px;/* Spacing between the container and the arrow */
   }
+
+  @media (max-width: 576px) {
+    .main-suggestion{
+      justify-content: center;
+      align-items: center;
+    }
+    .suggestion-title {
+      padding-left: 0rem;
+    }
+    .section-container {
+      padding: 20px 0px 20px 0px;
+      max-width: 100%;
+    }
+    .scroll-icon {
+      margin: 0px 10px 0px 10px;
+      font-size: 1rem;
+    }
+
+  }

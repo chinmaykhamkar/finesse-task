@@ -24,9 +24,9 @@ export default function ShippingTable() {
       <Table sx={{ minWidth: 50 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Location</TableCell>
-            <TableCell align="center">Standard Shipping</TableCell>
-            <TableCell align="center">Express Shipping</TableCell>
+            <TableCell className='table1-accordon' align="center">Location</TableCell>
+            <TableCell className='table1-accordon' align="center">Standard Shipping</TableCell>
+            <TableCell className='table1-accordon' align="center">Express Shipping</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

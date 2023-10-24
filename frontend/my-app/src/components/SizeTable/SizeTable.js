@@ -29,11 +29,11 @@ export default function SizeTable() {
       <Table sx={{ minWidth: 50 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Size</TableCell>
-            <TableCell align="center">US</TableCell>
-            <TableCell align="center">Bust</TableCell>
-            <TableCell align="center">Waist</TableCell>
-            <TableCell align="center">Hip</TableCell>
+            <TableCell className='table1-accordon' align="center">Size</TableCell>
+            <TableCell className='table1-accordon' align="center">US</TableCell>
+            <TableCell className='table1-accordon' align="center">Bust</TableCell>
+            <TableCell className='table1-accordon' align="center">Waist</TableCell>
+            <TableCell className='table1-accordon' align="center">Hip</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

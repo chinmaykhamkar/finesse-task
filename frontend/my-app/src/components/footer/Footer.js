@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faSnapchat, faTiktok, faTwitter,faFacebookF,  faYoutube } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css'
 import payments from '../../assets/payments.png'
+import payments_m from '../../assets/payments_m.png';
 
 const Footer = () => {
     return (
@@ -68,7 +69,8 @@ const Footer = () => {
                 </div>
                 <div className='bottom-right'>
                     <div className='bright-content'>
-                        <img className='bright-img' src={payments}/>
+                        <img className='bright-img' src={payments}/>                        
+                        <img className='bright-imgm' src={payments_m}/>
                     </div> 
                 </div>
             </div>

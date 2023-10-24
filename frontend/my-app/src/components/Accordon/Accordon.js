@@ -27,12 +27,12 @@ const Accordon = () => {
                     aria-controls="panel1bh-content"
                     id="panel1bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0 }}>
+                    <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>
                         Description
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <Typography className='accordon-text'>
                         Pink, pretty, and precious - this pink bow mini dress will have everyone falling for you 💗
                         Made from poplin fabric and complete with a fit and flare shape, bow details, shirring, and
                         center back invisible zipper 🌟
@@ -45,10 +45,10 @@ const Accordon = () => {
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0 }}>Material</Typography>
+                    <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>Material</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
+                    <Typography className='accordon-text'>
                         100% Cotton
                         <br></br>
                         Lining: 100% Polyester
@@ -61,7 +61,7 @@ const Accordon = () => {
                     aria-controls="panel3bh-content"
                     id="panel3bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0 }}>
+                    <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>
                         Shipping and Returns
                     </Typography>
                 </AccordionSummary>
@@ -71,17 +71,17 @@ const Accordon = () => {
                     </Typography>
                     <ShippingTable />
                     <br></br>
-                    <Typography>
+                    <Typography className='accordon-text'>
                         Subject to availability*
                     </Typography>
-                    <Typography>
+                    <Typography className='accordon-text'>
                         Express shipping is currently not available for P.O. addresses
                     </Typography>
                     <br></br>
                     <Typography className='shipping-info'>
                         Free Return & Exchange Shipping
                     </Typography>
-                    <Typography>
+                    <Typography className='accordon-text'>
                     Returns and exchanges are easy and are accepted within 45 days of order delivery
                     🙂 We also offer free shipping for returns and exchanges!
                     </Typography>
@@ -93,12 +93,12 @@ const Accordon = () => {
                     aria-controls="panel4bh-content"
                     id="panel4bh-header"
                 >
-                    <Typography sx={{ width: '33%', flexShrink: 0 }}>Size Guide</Typography>
+                    <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>Size Guide</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <SizeTable />
                     <br></br>
-                    <Typography>
+                    <Typography className='accordon-text'>
                     Returns and exchanges are easy and are accepted within 45 days of order delivery
                     🙂 We also offer free shipping for returns and exchanges!
                     </Typography>
