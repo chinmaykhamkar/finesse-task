@@ -6,3 +6,6 @@
   /* background-color: red; */
   
 }
+#root, .app, body, html {
+  overflow-x: hidden;
+}
