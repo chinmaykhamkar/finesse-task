@@ -10,6 +10,7 @@ body,html {
 }
 html, body, #root, .app {
   height: 100%;
+  overflow-x: hidden;
 }
 
 code {
