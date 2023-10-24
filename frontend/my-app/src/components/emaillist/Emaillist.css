@@ -1,0 +1,70 @@
+.main-email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: red; */
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+.email-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    /* background-color: green; */
+    height: auto;
+    width: 80%;
+}
+
+.email-title {
+    /* background-color: palegoldenrod; */
+    width: 60%;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+
+}
+
+.email-middle {
+
+    display: flex;
+    width: 60%;
+    /* background-color: pink; */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.email-left {
+    display: flex;
+    font-size: small;
+    width: 45%;
+    /* background-color: red; */
+}
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+    font-size: smaller;
+}
+
+.email-right {
+    display: flex;
+    /* background-color: peachpuff; */
+    width: 45%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+    height: 1.8rem;
+    background-color: black !important;
+}
+
+.email-bottom {
+    display: flex;
+    width: 70%;
+    /* background-color: ivory; */
+    font-size: xx-small;
+    justify-content: center;
+    align-items: center;
+}

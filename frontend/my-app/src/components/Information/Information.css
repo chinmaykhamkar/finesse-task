@@ -1,0 +1,49 @@
+.main-info {
+    display: flex;
+    /* background-color: red;D */
+    width: 100%;
+    height: auto;
+    padding-top: 4.5rem;
+    margin-top: 5rem;
+    border-top: 0.1rem solid rgba(0,0,0,.08);
+    border-bottom: 0.1rem solid rgba(0,0,0,.08);
+    padding-bottom: 4.5rem;
+}
+
+.block-icon {
+    margin-right: 5px;
+    
+}
+.info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background-color: green; */
+    border-left: 0.1rem solid rgba(0,0,0,.08);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.block-title {
+    display: flex;
+    /* background-color: pink; */
+    font-size: smaller;
+    font-weight: bold;
+    height: 2rem;
+
+}
+
+.block-content {
+    display: flex;
+    /* background-color: tan; */
+    font-size: 0.75rem;
+}
+
+.block-learn {
+    display: flex;
+    /* background-color: saddlebrown; */
+    padding-top: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: smaller;
+}

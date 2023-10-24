@@ -1,1 +1,3 @@
 - use map instead of hardcoded values. will be useful in scalling
+- implement the search button
+- zoom image

@@ -8,11 +8,4 @@
 - try try in 3d mode
 - add name of product and price below the model image. tbh I don't see the need for this.
 - shift the free shipping, free exchange section at the end
-- in the images there should be atleast one picture of a model wearing it. not all the products have it. 
-
-
-ux issues 
-- inconsistent navbars for desktop and mobile view
-- the product image cuts and not fully visible. can improve on this by reducing the height
-- quantity of cloth is missing in mobile view
-- smooth transition of accordon
+- quantity of product is missing in mobile view
