@@ -114,6 +114,7 @@ const NavBar = () => {
 
     const list = (anchor) => (
         <Box
+            className='drawer-left'
             sx={{ width: 250 }}
             role="presentation"
             //   onClick={toggleDrawer(anchor, false)}
@@ -188,7 +189,7 @@ const NavBar = () => {
                     {['left'].map((anchor) => (
                         <Fragment key={anchor}>
                             <FontAwesomeIcon onClick={toggleDrawer(anchor, true)} className='nav-sidebar' icon={faBars} />
-                            <Drawer
+                            <Drawer                                
                                 anchor={anchor}
                                 open={state[anchor]}
                                 onClose={toggleDrawer(anchor, false)}

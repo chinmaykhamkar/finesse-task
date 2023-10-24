@@ -274,7 +274,7 @@
     font-size: 0.9rem !important;
     font-weight: bold !important;
     width: auto !important;
-   }
+}
 
 .addtocart-btn {
     display: flex;
@@ -312,10 +312,12 @@
 .accordon-text {
     font-size: 0.8rem !important;
 }
+
 .table1-accordon {
     font-size: 0.8rem !important;
-    font-weight: bold !important;   
+    font-weight: bold !important;
 }
+
 .css-1ndpvdd-MuiTableCell-root {
     font-size: 0.8rem !important;
     font-weight: bold !important;
@@ -347,6 +349,9 @@
         width: 100%;
     }
 
+    .main-sizeguide {
+        height: auto;
+    }
 
     .product-name-price {
         flex-direction: row;
@@ -405,41 +410,55 @@
     .product-size-bar {
         width: 100%;
     }
+
     .sizeguide-top {
-    height: 7rem;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
+
     .top-title {
         align-items: end;
     }
+
     .top-cross {
         margin-left: 1rem;
         align-items: end;
     }
+
     .sizeguide-middle {
-
+        height: auto;
     }
+
     .sizeguide-bottom {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        height: auto;
     }
-   .sizeguide-select {
-    width: 85%;
-   }
-   .sizeguide-chart {
-    width: 85%;
-   }
 
-   .accordon-div {
-    width: 100%;
-   }
+    .sizeguide-select {
+        width: 85%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-   .accordon-title {
-    font-size: 0.75 rem !important;
-    font-weight: bold !important;
-    width: auto !important;
-   }
-   .addtocart-btn {
-    width: 90%;
-   }
+    .sizeguide-chart {
+        width: 85%;
+    }
+
+    .accordon-div {
+        width: 100%;
+    }
+
+    .accordon-title {
+        font-size: 0.75 rem !important;
+        font-weight: bold !important;
+        width: auto !important;
+    }
+
+    .addtocart-btn {
+        width: 90%;
+    }
+
     .product-quantity {}
 
     .product-addtocart {}

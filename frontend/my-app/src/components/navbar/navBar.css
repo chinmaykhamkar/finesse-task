@@ -9,6 +9,9 @@
     z-index: 4;
 }
 
+.drawer-left {
+    overflow-x: hidden !important;
+}
 .navbar-left {
     display: flex;
     justify-content: center;
