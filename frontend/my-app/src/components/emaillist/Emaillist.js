@@ -16,7 +16,7 @@ const Emaillist = () => {
                     </div>
                     <div className='email-right'>
                         <TextField id="standard-basic" label="Email" variant="standard" />
-                        <Button variant="contained">Enter</Button>
+                        <Button className='email-btn' variant="contained">Enter</Button>
                     </div>
                 </div>
                 <div className='email-bottom'>

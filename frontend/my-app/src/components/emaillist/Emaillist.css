@@ -55,11 +55,15 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
+/* .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    height: 1.8rem;
+    background-color: black !important;
+}    */
+
+.email-btn {
     height: 1.8rem;
     background-color: black !important;
 }
-
 .email-bottom {
     display: flex;
     width: 70%;
