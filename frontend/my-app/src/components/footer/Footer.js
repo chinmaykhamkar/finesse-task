@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <div className='footer-bottom'>
                 <div className='bottom-left'>
-                    <div className='bleft-content'>
+                    <div>
                         © 2023, FINESSE US Inc.
                     </div>
                     <div className='bleft-content'>

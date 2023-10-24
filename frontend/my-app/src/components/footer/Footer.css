@@ -32,6 +32,11 @@
 .left-content {
     font-size: small;
     color: gray;
+    cursor: pointer;
+}
+.left-content:hover {
+    color: black;
+    text-decoration: underline;
 }
 
 .right-icon {
@@ -47,6 +52,10 @@
     align-items: center;
     height: 2rem;
     cursor: pointer;
+}
+.bleft-content:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .top-right {
