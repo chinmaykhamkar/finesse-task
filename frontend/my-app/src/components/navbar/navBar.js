@@ -273,7 +273,7 @@ const NavBar = (props) => {
                             className='discount-modal'
                         >
                             <div className='halo-image'>
-                                <img className='image-halo' src={haloween} />
+                                <img loading='lazy' className='image-halo' src={haloween} />
                                 <div className='discount-text'>
                                     Grab a 20% discount at checkout with the following code!!
                                 </div>
