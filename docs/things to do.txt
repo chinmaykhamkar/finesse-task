@@ -1,3 +1,0 @@
-
-- implement the search button
-- zoom image

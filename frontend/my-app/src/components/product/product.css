@@ -137,6 +137,7 @@
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
+    user-select: none;
 
 }
 
@@ -148,6 +149,7 @@
     /* background-color: blue; */
     color: #8D8D8D;
     padding-bottom: 2rem;
+    user-select: none;
 }
 
 .size-guide {
