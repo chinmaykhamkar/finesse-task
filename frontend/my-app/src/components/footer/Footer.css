@@ -116,6 +116,9 @@
 
     }
 
+    .left-content:hover {
+        color: white;
+    }
     .footer-bottom {
         flex-direction: column;
         justify-content: center;
