@@ -1,4 +1,5 @@
-import { Fragment, useState } from 'react'
+import { Fragment, createContext, useState } from 'react'
+import '../../App.css'
 import './navBar.css'
 import logo from '../../assets/logo.jpg'
 import productImg from '../../assets/img1.jpg'
@@ -7,7 +8,24 @@ import { faMagnifyingGlass, faCartShopping, faBars, faXmark, faChevronDown, faCh
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Product from '../product/product'
-const NavBar = () => {
+import Switch from '@mui/material/Switch';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import haloween from '../../assets/haloween.jpeg'
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
+
+const NavBar = (props) => {
     const [searchExpand, setSearchExpand] = useState(false);
     const [productNav, setProductNav] = useState(false);
     const [collectionsNav, setCollectionsNav] = useState(false);
@@ -15,7 +33,10 @@ const NavBar = () => {
     const [collectionsDropdown, setCollectionsDropdown] = useState(false);
     const [ocassionsDropdown, setOcassionsDropdown] = useState(false);
     const [categoryDropdown, setcatergoryDropdown] = useState(false);
-
+    const [theme, setTheme] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [count, setCount] = useState(0);
+    // false -> light, true -> haloween
     const featured = ['Shop All', 'New Arrivals', 'Best Sellers']
     const categories = ['Sets', 'Tops', 'Bottoms', 'Dresses', 'Jumpsuits & Rompers', 'Outerwear', 'Accessories', 'Swimsuits']
     const featuredCollections = ['Shop All', 'Roseate', 'Sedusa', 'Avalon', 'Luma', 'Sonora', 'Omnia', 'Terra', 'Nirvana', 'Chroma', 'Fantasia', 'Whimsical', 'Blanc']
@@ -23,6 +44,21 @@ const NavBar = () => {
     const [state, setState] = useState({
         left: false,
     });
+
+
+    const handleOpen = (val) => {
+        if(val == 0) {
+            setOpen(true);
+            setCount(1);
+        }
+    };
+    const handleClose = () => setOpen(false)
+
+    const toggleTheme = () => {
+        setTheme(!theme);
+        props.toggleTheme(theme);
+    }
+
 
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -131,8 +167,8 @@ const NavBar = () => {
                 <FontAwesomeIcon className='nav-dropdown' onClick={toggleProductDropDown} icon={productDropdown ? faChevronUp : faChevronDown} />
             </div>
             {productDropdown && (
-                <div className='products-nav-dropdown'>    
-                    {featuredListMobile}                    
+                <div className='products-nav-dropdown'>
+                    {featuredListMobile}
                     <div className='drawer-list drawer-sublist'>
                         <div className='drawer-list-name sub-sub-list'>Shop by Category</div>
                         <FontAwesomeIcon className='nav-dropdown dropdown-sublist' onClick={toggleCategoryDropDown} icon={categoryDropdown ? faChevronUp : faChevronDown} />
@@ -160,7 +196,7 @@ const NavBar = () => {
             </div>
             {ocassionsDropdown && (
                 <div className='products-nav-dropdown'>
-                    {featuredOcassionsListMobile}                      
+                    {featuredOcassionsListMobile}
                 </div>
             )}
             <div className='drawer-list'>
@@ -183,13 +219,13 @@ const NavBar = () => {
     }
     return (
         <Fragment>
-            <div className='navbar'>
+            <div className={`navbar ${theme ? 'theme1' : ''}`}>
                 <div className='navbar-left'>
                     <img className='logo' src={logo} />
                     {['left'].map((anchor) => (
                         <Fragment key={anchor}>
                             <FontAwesomeIcon onClick={toggleDrawer(anchor, true)} className='nav-sidebar' icon={faBars} />
-                            <Drawer                                
+                            <Drawer
                                 anchor={anchor}
                                 open={state[anchor]}
                                 onClose={toggleDrawer(anchor, false)}
@@ -207,12 +243,12 @@ const NavBar = () => {
                         <div className='navbar-links'>
                             Home
                         </div>
-                        <div onMouseEnter={() => {setProductNav(true); setCollectionsNav(false)}}                             
+                        <div onMouseEnter={() => { setProductNav(true); setCollectionsNav(false) }}
                             id='navbarLinks'
                             className='navbar-links navbar-hover'>
                             Products
                         </div>
-                        <div onMouseEnter={() => {setCollectionsNav(true); setProductNav(false)}}                            
+                        <div onMouseEnter={() => { setCollectionsNav(true); setProductNav(false) }}
                             className='navbar-links navbar-hover'>
                             Collections
                         </div>
@@ -227,11 +263,34 @@ const NavBar = () => {
                 <div className='navbar-right'>
                     <FontAwesomeIcon onClick={toggleSearch} className='search' icon={faMagnifyingGlass} />
                     <FontAwesomeIcon icon={faCartShopping} />
+                    <div className='haloween'>
+                        <Switch onClick={() => handleOpen(count)} onChange={() => toggleTheme()} color="primary" />
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                            className='discount-modal'
+                        >
+                            <div className='halo-image'>
+                                <img className='image-halo' src={haloween} />
+                                <div className='discount-text'>
+                                    Grab a 20% discount at checkout with the following code!!
+                                </div>
+                                <div className='dicount-code'>
+                                    HALOFIN20
+                                </div>
+                            </div>
+                        </Modal>
+
+                        <div className='tryme'>Try Me😉</div>
+                    </div>
+
                 </div>
             </div>
             {productNav && (<div onMouseEnter={() => setProductNav(true)}
-                                 onMouseLeave={() => setProductNav(false)}
-                                 className='product-dropdown' id="productDropdown">
+                onMouseLeave={() => setProductNav(false)}
+                className='product-dropdown' id="productDropdown">
                 <div className='product-left'>
                     <div className='product-details'>
                         <div className='product-featured'>
@@ -244,7 +303,7 @@ const NavBar = () => {
                             <div className='product-name'>
                                 Shop by Category
                             </div>
-                            {catergoryList}                          
+                            {catergoryList}
                         </div>
                     </div>
                 </div>
@@ -255,13 +314,13 @@ const NavBar = () => {
                 </div>
             </div>)}
             {collectionsNav && (<div onMouseEnter={() => setCollectionsNav(true)}
-                                     onMouseLeave={() => setCollectionsNav(false)}
-                                     className='product-dropdown'>
+                onMouseLeave={() => setCollectionsNav(false)}
+                className='product-dropdown'>
                 <div className='product-left'>
                     <div className='product-details'>
                         <div className='product-featured'>
                             <div className='product-name'>
-                            Shop by Collections
+                                Shop by Collections
                             </div>
                             {featuredCollectionsList}
                         </div>
@@ -269,7 +328,7 @@ const NavBar = () => {
                             <div className='product-name'>
                                 Shop by Ocassions
                             </div>
-                            {featuredOcassionsList}                            
+                            {featuredOcassionsList}
                         </div>
                     </div>
                 </div>
@@ -279,7 +338,7 @@ const NavBar = () => {
                     <div className='product-right-text'>Roseate Collection</div>
                 </div>
             </div>)}
-           
+
         </Fragment>
     );
 }

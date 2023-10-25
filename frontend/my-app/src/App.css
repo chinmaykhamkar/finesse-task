@@ -2,10 +2,19 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: auto;
   /* background-color: red; */
   
 }
+
 #root, .app, body, html {
   overflow-x: hidden;
+}
+
+.theme1 {
+  background-color: #E67E35 !important;
+}
+
+.theme2 {
+  background-color: #FBC24A !important;
 }

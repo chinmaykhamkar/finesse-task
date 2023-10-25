@@ -3,7 +3,7 @@ import './Suggestions.css'
 import img from '../../assets/logo.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-const Suggestions = () => {
+const Suggestions = (props) => {
 
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -64,7 +64,7 @@ const Suggestions = () => {
                 <div className='product-name'>
                     {ele.name}
                 </div>
-                <div className='product-pricee'>{ele.price}</div>
+                <div className={`product-pricee ${props.theme?'':'halo-theme'}`}>{ele.price}</div>
             </div>
 
         )

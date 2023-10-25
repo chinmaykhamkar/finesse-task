@@ -1,4 +1,4 @@
-import { Fragment, React, useState } from 'react';
+import { Fragment, React, useContext, useState } from 'react';
 import './product.css';
 // import { Carousel } from 'react-responsive-carousel';
 import { MagnifierContainer, MagnifierPreview, MagnifierZoom, SideBySideMagnifier } from "@vanyapr/react-image-magnifiers";
@@ -18,11 +18,12 @@ import sizeImgxl from '../../assets/xl.png'
 import sizeImg1x from '../../assets/1x.png'
 import sizeImg2x from '../../assets/2x.png'
 import sizeImg3x from '../../assets/3x.png'
-const Product = () => {
+const Product = (props) => {
 
     const [state, setState] = useState({
         bottom: false,
     });
+    
     const [className1, setClassName1] = useState('size-selector size-selected');
     const [className2, setClassName2] = useState('size-selector');
     const [className3, setClassName3] = useState('size-selector');
@@ -178,7 +179,7 @@ const Product = () => {
                         <div className='product-namee'>
                             Emi Pink Bow Mini Dress
                         </div>
-                        <div className='product-price'>
+                        <div className={`product-price ${props.theme?'':'theme-halo'}`}>
                             $46.00
                         </div>
                     </div>
@@ -208,7 +209,7 @@ const Product = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='product-sizeguide'>
+                    <div className={`product-sizeguide ${props.theme?'':'theme-halo'}`}>
                         {['bottom'].map((anchor) => (
                             <Fragment key={anchor}>
                                 Need help with sizing? View our <a onClick={openSizeDrawer(anchor, true)} className='size-guide'> Size Guide</a>

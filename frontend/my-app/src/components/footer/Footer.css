@@ -13,6 +13,9 @@
     border-bottom: 0.1rem solid rgba(0, 0, 0, .08);
 }
 
+.halo-theme {
+    color: black !important;
+}
 .top-first {
 
     display: flex;
@@ -162,6 +165,9 @@
         width: 90%;
         color: white;
         justify-content: space-between;
+    }
+    .halo-theme {
+        color: white !important;
     }
 
     .bottom-right {

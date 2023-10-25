@@ -6,6 +6,10 @@
     margin-top: 4.5rem;
 }
 
+.theme-halo {
+    color: black !important;
+}
+
 .product-wrap {
     display: flex;
     flex-direction: column;

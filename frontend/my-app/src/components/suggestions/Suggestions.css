@@ -103,6 +103,10 @@
     margin-right: 20px;/* Spacing between the container and the arrow */
   }
 
+  .halo-theme {
+    color: black !important;
+  }
+
   @media (max-width: 576px) {
     .main-suggestion{
       justify-content: center;

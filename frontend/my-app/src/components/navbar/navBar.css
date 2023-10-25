@@ -9,6 +9,21 @@
     z-index: 4;
 }
 
+
+
+.haloween {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    font-size: x-small;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+.tryme {
+
+}
 .drawer-left {
     overflow-x: hidden !important;
 }
@@ -81,6 +96,39 @@
 .navbar-links:hover {
     color: grey;
 }   
+.halo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;   
+    width: 35%;
+    flex-direction: column;
+}
+.discount-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-text {
+    margin-top: 1rem;
+    font-size: smaller;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.dicount-code {
+    background-color: orange;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.image-halo {
+    width: 90%;
+    margin-top: 5%;
+}
 
 
 .navbar-hover:hover {
@@ -206,7 +254,7 @@
         width: 65%;
     }
     .navbar-right {
-        width: 20%;
+        width: auto;
     }
     .navbar-linkzone {
         display: none;
@@ -217,6 +265,10 @@
     .logo-mobile {
         display: flex;
         max-width: 5rem;
+        padding-left: 3rem;
+    }
+    .haloween {
+        /* width: auto; */
     }
     .nav-sidebar {
         display: block;
@@ -228,6 +280,34 @@
         width: 100%;
         height: 100%;
     }
+
+    .halo-image {       
+        width: 75%;
+        
+    }
+    .discount-modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .discount-text {        
+        width: 90%;
+    }
+    .dicount-code {
+        background-color: orange;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid;
+        font-size: medium;
+        font-weight: bold;
+    }
+    
+    .image-halo {
+        width: 90%;
+        margin-top: 5%;
+    }
+
     .drawer-cross {
         /* background-color: red; */
         display: flex;
