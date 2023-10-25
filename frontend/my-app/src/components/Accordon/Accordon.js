@@ -45,6 +45,20 @@ const Accordon = () => {
                     aria-controls="panel2bh-content"
                     id="panel2bh-header"
                 >
+                    <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>Model</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography className='accordon-text'>
+                        Casey is 5'11" and is wearing a size S
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel3bh-content"
+                    id="panel3bh-header"
+                >
                     <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>Material</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -55,11 +69,11 @@ const Accordon = () => {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel3bh-content"
-                    id="panel3bh-header"
+                    aria-controls="panel4bh-content"
+                    id="panel4bh-header"
                 >
                     <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>
                         Shipping and Returns
@@ -82,16 +96,16 @@ const Accordon = () => {
                         Free Return & Exchange Shipping
                     </Typography>
                     <Typography className='accordon-text'>
-                    Returns and exchanges are easy and are accepted within 45 days of order delivery
-                    🙂 We also offer free shipping for returns and exchanges!
+                        Returns and exchanges are easy and are accepted within 45 days of order delivery
+                        🙂 We also offer free shipping for returns and exchanges!
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+            <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel4bh-content"
-                    id="panel4bh-header"
+                    aria-controls="panel5bh-content"
+                    id="panel5bh-header"
                 >
                     <Typography className='accordon-title' sx={{ width: '33%', flexShrink: 0 }}>Size Guide</Typography>
                 </AccordionSummary>
@@ -99,8 +113,8 @@ const Accordon = () => {
                     <SizeTable />
                     <br></br>
                     <Typography className='accordon-text'>
-                    Returns and exchanges are easy and are accepted within 45 days of order delivery
-                    🙂 We also offer free shipping for returns and exchanges!
+                        Returns and exchanges are easy and are accepted within 45 days of order delivery
+                        🙂 We also offer free shipping for returns and exchanges!
                     </Typography>
                 </AccordionDetails>
             </Accordion>

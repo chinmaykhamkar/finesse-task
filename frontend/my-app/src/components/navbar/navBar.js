@@ -1,6 +1,8 @@
 import { Fragment, createContext, useState } from 'react'
 import '../../App.css'
 import './navBar.css'
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
 import logo from '../../assets/logo.jpg'
 import productImg from '../../assets/img1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -43,11 +45,12 @@ const NavBar = (props) => {
     const ocassions = ['Haloween', 'Roman Empire', 'Going Out', 'Date Night', 'Back to School', 'Basics', 'Homecoming', 'Resort', 'Prom Queen', 'Festival', "Paith's Faves", 'Maliboo', 'Metallic', 'Mesh', 'Rhinestone']
     const [state, setState] = useState({
         left: false,
+        top: false
     });
 
 
     const handleOpen = (val) => {
-        if(val == 0) {
+        if (val == 0) {
             setOpen(true);
             setCount(1);
         }
@@ -261,7 +264,91 @@ const NavBar = (props) => {
                     </div>
                 </div>
                 <div className='navbar-right'>
-                    <FontAwesomeIcon onClick={toggleSearch} className='search' icon={faMagnifyingGlass} />
+                    {['top'].map((anchor) => (
+                        <Fragment key={anchor}>
+                            <FontAwesomeIcon onClick={toggleDrawer(anchor, true)} className='search' icon={faMagnifyingGlass} />
+                            <Drawer
+                                anchor={anchor}
+                                open={state[anchor]}
+                                onClose={toggleDrawer(anchor, false)}
+                            >
+                                <div className='search-div'>
+                                    <div className='search-cross'>
+                                        <FontAwesomeIcon onClick={toggleDrawer(anchor, false)} icon={faXmark} />
+                                    </div>
+                                    <div className='search-first'>
+                                        <div className='search-bar'>
+                                            <TextField
+                                                className='search-barr'
+                                                id="input-with-icon-textfield"
+                                                // style={{width:300}}                                               
+                                                placeholder='Search...'
+                                                InputProps={{
+                                                    startAdornment: (
+                                                        <InputAdornment position="start">
+                                                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                                        </InputAdornment>
+                                                    ),
+                                                }}
+                                                variant="standard"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='search-second'>
+                                        <div className='second-f'>
+                                            <div className='search-suggest'>
+                                                Suggestions
+                                            </div>
+                                            <div className='search-recc'>
+                                                New Arrivals
+                                            </div>
+                                            <div className='search-recc'>
+                                                Best Sellers
+                                            </div>
+                                        </div>
+                                        <div className='second-s'>
+                                            <div className='search-third'>
+                                                <div className='search-look'>
+                                                    Are you looking for...
+                                                </div>
+                                            </div>
+                                            <div className='search-four'>
+                                                <div className='four-f'>
+                                                    <div className='four-img'>
+                                                        <img className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-1_1b6fbc4f-ae21-4cbc-b755-603c8a5d9370.jpg?v=1684778243' />
+                                                        <div className='four-text'>
+                                                            Rumi White Cropped Rhinestone Top
+                                                        </div>
+                                                    </div>
+                                                    <div className='four-img'>
+                                                        <img className='search-img' src='https://finesse.us/cdn/shop/products/3D-Set-Front_6572ed78-803a-4120-831b-75424fa95a54.jpg?v=1682025687' />
+                                                        <div className='four-text'>
+                                                            Flora Flower Mini Dress
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className='four-s'>
+                                                    <div className='four-img'>
+                                                        <img className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-4_715c86f9-d60a-4f96-9cf2-fdd3d91ffc4c.jpg?v=1682962157' />
+                                                        <div className='four-text'>
+                                                            Philo Silver Sequin Mini Skirt
+                                                        </div>
+                                                    </div>
+                                                    <div className='four-img'>
+                                                        <img className='search-img' src='https://finesse.us/cdn/shop/products/3D-Pant-Front_c41bb98b-62fe-4219-a70c-525041ea0673.jpg?v=1674914358' />
+                                                        <div className='four-text'>
+                                                            Dixon Shimmer Cargo Pant
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </Drawer>
+                        </Fragment>
+                    ))}
                     <FontAwesomeIcon icon={faCartShopping} />
                     <div className='haloween'>
                         <Switch onClick={() => handleOpen(count)} onChange={() => toggleTheme()} color="primary" />
@@ -283,7 +370,7 @@ const NavBar = (props) => {
                             </div>
                         </Modal>
 
-                        <div className='tryme'>Try Me😉</div>
+                        <div className='tryme'>Try Me🙂</div>
                     </div>
 
                 </div>

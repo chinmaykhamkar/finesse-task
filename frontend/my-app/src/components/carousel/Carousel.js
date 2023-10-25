@@ -7,7 +7,7 @@ import { useZoomImageClick } from "@zoom-image/react"
 import './Carousel.css';
 export default () => {
 
-    const imgArr = ["https://finesse.us/cdn/shop/files/1_f02e4da1-2077-4c28-9e14-0413c74340f8.jpg?v=1697620821&width=823",
+    const imgArr = ["https://finesse.us/cdn/shop/products/file_fbe029d5-ce6f-4a4b-ad03-12de748de70c.jpg?v=1674955469&width=1445",
         "https://finesse.us/cdn/shop/files/2_e71cc6e4-65ab-45f4-a416-d48750ca3ef8.jpg?v=1697620821&width=823",
         "https://finesse.us/cdn/shop/files/3_109b5dfe-21f2-45fc-ae69-1182def10f52.jpg?v=1697620820&width=823"]
 
@@ -60,17 +60,22 @@ export default () => {
 
                 </div> */}
                 <div className='test'>
-                    <img className='carousel-img' alt="" src="https://finesse.us/cdn/shop/files/1_f02e4da1-2077-4c28-9e14-0413c74340f8.jpg?v=1697620821&width=823" />
+                    <img loading='lazy' className='carousel-img' alt="" src="https://finesse.us/cdn/shop/products/file_fbe029d5-ce6f-4a4b-ad03-12de748de70c.jpg?v=1674955469&width=1445" />
 
                 </div>
                 <div className='test'>
-                    <img className='carousel-img' alt="" src="https://finesse.us/cdn/shop/files/2_e71cc6e4-65ab-45f4-a416-d48750ca3ef8.jpg?v=1697620821&width=823" />
+                    <img loading='lazy' className='carousel-img' alt="" src="https://finesse.us/cdn/shop/products/file_d92bb309-b1c6-44fc-b0f6-b7a33a90d693.jpg?v=1674955469&width=823" />
 
                 </div>
                 <div className='test'>
-                    <img className='carousel-img' alt="" src="https://finesse.us/cdn/shop/files/3_109b5dfe-21f2-45fc-ae69-1182def10f52.jpg?v=1697620820&width=823" />
+                    <img loading='lazy' className='carousel-img' alt="" src="https://finesse.us/cdn/shop/products/file_ead9228a-a716-445a-8905-34caea5b18fa.jpg?v=1674955469&width=823" />
 
                 </div>
+                <div className='test'>
+                    <img loading='lazy' className='carousel-img' alt="" src="https://finesse.us/cdn/shop/products/file_86ebb7b3-f1ec-4650-a3db-1983b106db83.jpg?v=1674955469&width=800" />
+
+                </div>
+
             </Carousel>
         </div>
     );
