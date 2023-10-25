@@ -274,7 +274,7 @@ const NavBar = (props) => {
                             >
                                 <div className='search-div'>
                                     <div className='search-cross'>
-                                        <FontAwesomeIcon onClick={toggleDrawer(anchor, false)} icon={faXmark} />
+                                        <FontAwesomeIcon onClick={toggleDrawer(anchor, false)}   icon={faXmark} />
                                     </div>
                                     <div className='search-first'>
                                         <div className='search-bar'>
@@ -315,13 +315,13 @@ const NavBar = (props) => {
                                             <div className='search-four'>
                                                 <div className='four-f'>
                                                     <div className='four-img'>
-                                                        <img className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-1_1b6fbc4f-ae21-4cbc-b755-603c8a5d9370.jpg?v=1684778243' />
+                                                        <img loading='lazy' className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-1_1b6fbc4f-ae21-4cbc-b755-603c8a5d9370.jpg?v=1684778243' />
                                                         <div className='four-text'>
                                                             Rumi White Cropped Rhinestone Top
                                                         </div>
                                                     </div>
                                                     <div className='four-img'>
-                                                        <img className='search-img' src='https://finesse.us/cdn/shop/products/3D-Set-Front_6572ed78-803a-4120-831b-75424fa95a54.jpg?v=1682025687' />
+                                                        <img loading='lazy' className='search-img' src='https://finesse.us/cdn/shop/products/3D-Set-Front_6572ed78-803a-4120-831b-75424fa95a54.jpg?v=1682025687' />
                                                         <div className='four-text'>
                                                             Flora Flower Mini Dress
                                                         </div>
@@ -329,13 +329,13 @@ const NavBar = (props) => {
                                                 </div>
                                                 <div className='four-s'>
                                                     <div className='four-img'>
-                                                        <img className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-4_715c86f9-d60a-4f96-9cf2-fdd3d91ffc4c.jpg?v=1682962157' />
+                                                        <img loading='lazy' className='search-img' src='https://finesse.us/cdn/shop/files/3D-ECOMM-4_715c86f9-d60a-4f96-9cf2-fdd3d91ffc4c.jpg?v=1682962157' />
                                                         <div className='four-text'>
                                                             Philo Silver Sequin Mini Skirt
                                                         </div>
                                                     </div>
                                                     <div className='four-img'>
-                                                        <img className='search-img' src='https://finesse.us/cdn/shop/products/3D-Pant-Front_c41bb98b-62fe-4219-a70c-525041ea0673.jpg?v=1674914358' />
+                                                        <img loading='lazy' className='search-img' src='https://finesse.us/cdn/shop/products/3D-Pant-Front_c41bb98b-62fe-4219-a70c-525041ea0673.jpg?v=1674914358' />
                                                         <div className='four-text'>
                                                             Dixon Shimmer Cargo Pant
                                                         </div>
